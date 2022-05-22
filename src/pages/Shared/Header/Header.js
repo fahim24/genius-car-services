@@ -31,7 +31,7 @@ const Header = () => {
 							About
 						</Nav.Link>
 						{user && (
-							<NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+							<NavDropdown title="Settings" id="collasible-nav-dropdown">
 								<NavDropdown.Item as={Link} to="/addservice">
 									Add Service
 								</NavDropdown.Item>
@@ -40,7 +40,9 @@ const Header = () => {
 								</NavDropdown.Item>
 								<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
 								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+								<NavDropdown.Item as={Link} to="/orders">
+									Orders
+								</NavDropdown.Item>
 							</NavDropdown>
 						)}
 						{user ? (

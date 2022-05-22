@@ -14,6 +14,7 @@ import Checkout from "./pages/CheckOut/CheckOut";
 import AddService from "./pages/AddService/AddService";
 import ManageServices from "./pages/ManageServices/ManageServices";
 import { ToastContainer } from "react-toastify";
+import Order from "./pages/Order/Order";
 
 function App() {
 	return (
@@ -47,6 +48,14 @@ function App() {
 					element={
 						<RequireAuth>
 							<ManageServices></ManageServices>
+						</RequireAuth>
+					}
+				></Route>
+				<Route
+					path="/orders"
+					element={
+						<RequireAuth>
+							<Order></Order>
 						</RequireAuth>
 					}
 				></Route>
